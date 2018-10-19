@@ -7,17 +7,29 @@ public class Question1 {
 
 	public static int bestMergedPortfolio(int[] portfolios) {
             
-         ArrayList<Integer> FinalPortfolio = new ArrayList<Integer>();
+         ArrayList<Integer> FinalPortfolio = new ArrayList<Integer>(); 
             
-         for(int j=0;j<portfolios.length;j++)
+         if(portfolios.length<2)
+        {
+            return portfolios[0];
+        }
+        else
+        {
+            int temp=0,j=1;
+            while(j<portfolios.length)
             {
-               for(int k=j+1;k<portfolios.length;k++)
+               FinalPortfolio.add(portfolios[temp]^portfolios[j]);
+               if(j==portfolios.length-1)
                {
-                   FinalPortfolio.add(portfolios[j]^portfolios[k]);
+                   temp++;
+                   j=temp;
+                   
                }
-            }
+                j++;
+            } 
          
             return Collections.max(FinalPortfolio);
-	}
+        }
+    }
 
 }
