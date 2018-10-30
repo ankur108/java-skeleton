@@ -42,9 +42,9 @@ public class Question2 {
             {
                 for(int j=0;j<cashOutSet.size();j++)
                 {
-                    if(cashInSet.get(i)>=cashOutSet.get(j) && difference>(cashInSet.get(i)-cashOutSet.get(j)))
+                    if(difference>(Math.abs(cashInSet.get(i)-cashOutSet.get(j))))
                     { 
-                        difference=cashInSet.get(i)-cashOutSet.get(j);
+                        difference=Math.abs(cashInSet.get(i)-cashOutSet.get(j));
                         
                     }
                     
