@@ -7,6 +7,13 @@ public class Question1 {
 
 	public static int bestMergedPortfolio(int[] portfolios) {
             
+         
+         if(portfolios.length<2)
+         {
+             return portfolios[0];
+         }
+         else
+         {
          int max=max=portfolios[0]^portfolios[1];
          int temp=0;
             
@@ -19,7 +26,9 @@ public class Question1 {
                }
             }
             
-            return max;
+            return max; 
+         }
+         
          
     }
 }
